@@ -32,7 +32,9 @@ jobs:
 
             # Update and install core tools
             sudo dnf update -y
+            sudo dnf remove -y curl-minimal
             sudo dnf install -y git curl tar gzip maven java-17-amazon-corretto
+
 
             # Install Docker from Docker CE
             sudo dnf config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
